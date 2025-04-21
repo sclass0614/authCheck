@@ -5,6 +5,6 @@ const { data } = await supabase.auth.getSession();  // 로그인 세션 확인
 const params = new URLSearchParams(window.location.search);  // URL 쿼리 분석
 
 if (!data.session || params.get("from") !== "index") {
-  alert("정상적인 경로가 아닙니다. 대시보드를 통해 접속해주세요.");
+  alert("정상적인 경로가 아닙니다. 통합관리 페이지를 통해 접속해주세요.");
   location.href = "https://your-dashboard.github.io/";  // 대시보드로 리디렉션
 }
